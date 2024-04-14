@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import background from "./assets/background1.svg";
+import background from "../../assets/background.svg";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   background: url("${background}");
@@ -8,7 +9,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
+  width: 100vw;
 `;
 
 export const Image = styled.img`
@@ -22,11 +25,13 @@ export const ContainerItems = styled.div`
     rgba(255, 255, 255, 0.6) 0.85%,
     rgba(255, 255, 255, 0.15) 100%
   );
+  backdrop-filter: blur(45px);
   border-radius: 61px 61px 0px 0px;
   padding: 50px 36px;
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: calc(100vh - 170px);
 `;
 
 export const H1 = styled.h1`
@@ -37,35 +42,7 @@ export const H1 = styled.h1`
   font-size: 28px;
 `;
 
-export const InputLabel = styled.p`
-  color: white;
-  padding-left: 25px;
-  width: 47px;
-  height: 22px;
-  line-height: 22px;
-  font-size: 20px;
-  margin-bottom: 3px;
-  font-weight: normal;
-`;
-
-export const Input = styled.input`
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background: rgba(255, 255, 255, 0.25);
-  outline: none;
-  border: none;
-  border-radius: 14px;
-  width: 342px;
-  height: 58px;
-  padding-left: 25px;
-  margin-bottom: 10px;
-  color: white;
-  //escrita no input:
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: normal;
-`;
-
-export const Button = styled.button`
+export const Button = styled(Link)`
   color: white;
   background: black;
   width: 342px;
@@ -73,13 +50,18 @@ export const Button = styled.button`
   border-radius: 14px;
   border: none;
   outline: none;
-  margin-top: 40px;
+  margin-top: 120px;
   cursor: pointer;
   //posição da seta
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
+
+  img {
+    transform: rotateY(180deg);
+  }
+
   //escrita do botão:
   font-size: 18px;
 
