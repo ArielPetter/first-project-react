@@ -31,14 +31,6 @@ export const ContainerItems = styled.div`
   height: 100%;
 `;
 
-export const H1 = styled.h1`
-  color: white;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 60px;
-  font-size: 28px;
-`;
-
 export const InputLabel = styled.p`
   color: white;
   padding-left: 25px;
