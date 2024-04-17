@@ -17,20 +17,6 @@ export const Image = styled.img`
   margin-top: 40px;
 `;
 
-export const ContainerItems = styled.div`
-  background: linear-gradient(
-    157.44deg,
-    rgba(255, 255, 255, 0.6) 0.84%,
-    rgba(255, 255, 255, 0.6) 0.85%,
-    rgba(255, 255, 255, 0.15) 100%
-  );
-  border-radius: 61px 61px 0px 0px;
-  padding: 50px 36px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`;
-
 export const InputLabel = styled.p`
   color: white;
   padding-left: 25px;
@@ -59,31 +45,4 @@ export const Input = styled.input`
   font-size: 20px;
   line-height: 28px;
   font-weight: normal;
-`;
-
-export const Button = styled(Link)`
-  color: white;
-  background: black;
-  margin-top: 120px;
-  width: 342px;
-  height: 74px;
-  border-radius: 14px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  //posição da seta
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  //escrita do botão:
-  font-size: 18px;
-
-  &:hover {
-    opacity: 0.9;
-  }
-
-  &:active {
-    opacity: 0.8;
-  }
 `;

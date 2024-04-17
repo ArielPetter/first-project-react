@@ -5,15 +5,11 @@ import axios from "axios";
 import People from "../../assets/people.svg";
 import Arrow from "../../assets/arrow.svg";
 
-import H1 from '../../components/Title'
-import {
-  Container,
-  Image,
-  ContainerItems,
-  InputLabel,
-  Input,
-  Button,
-} from "./style";
+import H1 from "../../components/Title";
+import ContainerItems from "../../components/Containeritems";
+import Button from "../../components/Button"
+
+import { Container, Image, InputLabel, Input } from "./style";
 /*para estilizar: adicionar a biblioteca styled-components => yarn add style-components*/
 
 //JSX ... no react classes são dadas com: className em vez de apenas class

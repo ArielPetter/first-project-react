@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import Avatar from "../../assets/avatar.svg";
 import Arrow from "../../assets/arrow.svg";
 import Trash from "../../assets/trash.svg";
 
-import H1 from "../../components/Title"
-import {
-  Container,
-  Image,
-  ContainerItems,
-  Button,
-  UserList,
-} from "./style";
+import H1 from "../../components/Title";
+import ContainerItems from "../../components/Containeritems";
+import Button from "../../components/Button";
+
+import { Container, Image, UserList } from "./style";
 /*para estilizar: adicionar a biblioteca styled-components => yarn add style-components*/
 
 //JSX ... no react classes são dadas com: className em vez de apenas class
@@ -38,7 +36,7 @@ function Users() {
   return (
     <Container>
       <Image alt="start-picture" src={Avatar} />
-      <ContainerItems>
+      <ContainerItems isBlur={true}>
         <H1>Users</H1>
         <ul>
           {users.map((user) => (
@@ -50,7 +48,7 @@ function Users() {
             </UserList>
           ))}
         </ul>
-        <Button to = "/" >
+        <Button isBack={true} as={Link} to="/">
           <img alt="arrow-register" src={Arrow} /> Return
         </Button>
       </ContainerItems>

@@ -1,6 +1,6 @@
-import style from 'styled-components'
+import styled from 'styled-components'
 
-export const H1 = style.h1`
+export const H1 = styled.h1`
   color: white;
   text-align: center;
   margin-top: 10px;
