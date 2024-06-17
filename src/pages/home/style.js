@@ -9,7 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  height: 100%;
+  height: 100vw;
   width: 100vw;
 `;
 
